@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label v-bind:title="titulo">Hola Mundo</label>
+        <hr>
+        <button v-on:click="mostrarImagen('https://upanama.educativa.org/archivos/repositorio/6000/6126/html/que-es-h.jpg')">Imagen HTML PNG</button>    
+        <button v-on:click="mostrarImagen('html.jfif')">Imagen HTML jfif</button>
+        <hr>
+        <img v-bind:src="imagen">
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    titulo: 'Este es un titulo dinámico',
+                    imagen: ''
+                }
+            },
+            methods: {
+                mostrarImagen(img) {
+                    this.imagen = img;
+               }
+            },
+        }
+        //mountedApp2.imagen = 'images.png' esto es para la consola
+        var mountedApp2 = Vue.createApp(app).mount('#app');
+    </script>
+</body>
+</html>
