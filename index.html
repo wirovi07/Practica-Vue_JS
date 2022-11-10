@@ -31,16 +31,21 @@
                 this.isRunning = true;
             },
             methods: {
-                stopInterval(){
-                    if(this.isRunning){
-                        clearInterval(this.contador);
+                stopInterval()
+                {
+
+                    if(this.isRunning)
+                    {
+                        clearInterval(this.interval);
                         this.isRunning = false;
-                    }else{
+                    }else
+                    {
                         this.interval = setInterval(() => {
                         this.contador++;
                         }, 1000) 
                         this.isRunning = true;
                     }
+
                 }
             },
         }
