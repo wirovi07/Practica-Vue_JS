@@ -38,7 +38,7 @@
 
         _app.component('posts-template', {
             template: `<div class="card-panel" style="background-color: red;">
-                          <h5>{{post.title}}</h5>
+                          <h5>{{post.id}} - {{post.title}}</h5>
                           <p>{{post.body}}</p>
                       </div>`,
             props: {
